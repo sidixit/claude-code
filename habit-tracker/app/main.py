@@ -1,0 +1,30 @@
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+
+from app.database import engine, Base
+from app.routers import habits_router, entries_router, stats_router
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(
+    title="Habit Tracker API",
+    description="A REST API for tracking habits and check-ins",
+    version="1.0.0",
+)
+
+app.include_router(habits_router)
+app.include_router(entries_router)
+app.include_router(stats_router)
+
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "Internal server error"},
+    )
+
+
+@app.get("/")
+def root():
+    return {"message": "Habit Tracker API", "docs": "/docs"}
