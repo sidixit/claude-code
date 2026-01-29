@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Habit Tracker</h1>
+
+        <div class="add-habit-section">
+            <h2>Add New Habit</h2>
+            <form id="add-habit-form">
+                <div class="form-group">
+                    <label for="habit-name">Habit Name</label>
+                    <input type="text" id="habit-name" name="name" required maxlength="100" placeholder="e.g., Exercise, Read, Meditate">
+                </div>
+                <div class="form-group">
+                    <label for="habit-frequency">Frequency</label>
+                    <select id="habit-frequency" name="frequency" required>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Habit</button>
+            </form>
+        </div>
+
+        <div class="habits-section">
+            <h2>All Habits</h2>
+            <div class="filter-group">
+                <label>
+                    <input type="checkbox" id="show-inactive"> Show inactive habits
+                </label>
+            </div>
+            <div id="habits-list" class="habits-list">
+                <p class="loading">Loading habits...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Habit</h2>
+            <form id="edit-habit-form">
+                <input type="hidden" id="edit-habit-id">
+                <div class="form-group">
+                    <label for="edit-habit-name">Habit Name</label>
+                    <input type="text" id="edit-habit-name" name="name" required maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="edit-habit-frequency">Frequency</label>
+                    <select id="edit-habit-frequency" name="frequency" required>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="edit-habit-active"> Active
+                    </label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-edit">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h2>Delete Habit</h2>
+            <p>Are you sure you want to delete "<span id="delete-habit-name"></span>"?</p>
+            <p class="warning">This will also delete all entries for this habit.</p>
+            <input type="hidden" id="delete-habit-id">
+            <div class="button-group">
+                <button type="button" class="btn btn-danger" id="confirm-delete">Delete</button>
+                <button type="button" class="btn btn-secondary" id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
