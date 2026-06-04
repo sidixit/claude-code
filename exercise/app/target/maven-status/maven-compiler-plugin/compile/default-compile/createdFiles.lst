@@ -1,0 +1,12 @@
+com/coderpad/app/config/KafkaConfig.class
+com/coderpad/app/model/DeviceEventProto.class
+com/coderpad/app/model/DeviceEvent$1.class
+com/coderpad/app/Main.class
+com/coderpad/app/model/DeviceEvent$MetadataDefaultEntryHolder.class
+com/coderpad/app/model/DeviceEventOrBuilder.class
+com/coderpad/app/db/DeviceEventRepository.class
+com/coderpad/app/RandomEventGenerator.class
+com/coderpad/app/config/DatabaseManager.class
+com/coderpad/app/model/DeviceEvent$Builder.class
+com/coderpad/app/model/DeviceEvent.class
+com/coderpad/app/kafka/DeviceEventProducer.class

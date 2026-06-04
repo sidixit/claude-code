@@ -1,0 +1,9 @@
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/Main.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/RandomEventGenerator.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/config/DatabaseManager.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/config/KafkaConfig.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/db/DeviceEventRepository.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/src/main/java/com/coderpad/app/kafka/DeviceEventProducer.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/target/generated-sources/protobuf/java/com/coderpad/app/model/DeviceEvent.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/target/generated-sources/protobuf/java/com/coderpad/app/model/DeviceEventOrBuilder.java
+/Users/siddharthdixit/Documents/GitHub/claude-code/exercise/app/target/generated-sources/protobuf/java/com/coderpad/app/model/DeviceEventProto.java
